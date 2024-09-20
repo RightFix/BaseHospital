@@ -28,11 +28,11 @@ export const action = async ({
   }: ActionFunctionArgs) => {
     invariant(params.PatientId, "Missing PatientId param");
     const formData = await request.formData();
-    //const firstName = formData.get("first");
-   // const lastName = formData.get("last");
+    const firstName = formData.get("first");
+    const lastName = formData.get("last");
     const updates = Object.fromEntries(formData);
-    //updates.first;
-    //updates.last;
+    updates.first;
+    updates.last;
     await updatePatient(params.PatientId, updates);
     return redirect(`/Patients/${params.PatientId}`);
   };

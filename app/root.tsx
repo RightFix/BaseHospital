@@ -55,7 +55,7 @@ useEffect(() => {
       </head>
       <body>
         <div id="sidebar">
-          <h1> <img src="../public/favicon.ico" alt="logo" id="PageLogo" /> Base Hospital Patient Records</h1>
+          <h1> <img src="favicon.ico" alt="logo" id="PageLogo" /> Base Hospital Patient Records</h1>
           <div>
             <Form id="search-form" 
             onChange={(event ) => {
