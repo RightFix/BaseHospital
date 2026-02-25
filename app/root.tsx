@@ -55,7 +55,22 @@ useEffect(() => {
       </head>
       <body>
         <div id="sidebar">
-          <h1> <img src="favicon.ico" alt="logo" id="PageLogo" /> Base Hospital Patient Records</h1>
+          <div className="sidebar-header">
+            <NavLink to="/" className="home-link">
+              <img src="/favicon.ico" alt="logo" id="PageLogo" />
+              <span>Base Hospital</span>
+            </NavLink>
+          </div>
+          
+          <div className="main-nav">
+            <NavLink to="/Patients" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+              Patients
+            </NavLink>
+            <NavLink to="/appointments" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+              Appointments
+            </NavLink>
+          </div>
+
           <div>
             <Form id="search-form" 
             onChange={(event ) => {
